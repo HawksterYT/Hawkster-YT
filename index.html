@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKWbfSR0k1jC8h76HF7qByqZRH2ZuWNehUcnN6fK2w5_FddLXXM1lTB08&s=10');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .social-icons {
+            background: #4CAF50;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            position: fixed; /* Faz o banner ficar fixo na borda superior esquerda */
+            left: 0;
+            top: 0;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+  .social-icons {
+    background: #4CAF50;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: purple;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="social-icons">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        <a href="https://discord.com"><i class="fab fa-discord"></i></a>
+    </div>
+
+    <div class="button-container">
+        <a href="#downloads" class="button" onclick="window.location.href='https://seulinkdownloads.com'">Downloads</a>
+        <a href="#noticias" class="button" onclick="window.location.href='https://seulinknoticias.com'">Notícias</a>
+        <a href="#jogos" class="button" onclick="window.location.href='https://seulinkjogos.com'">Jogos</a>
+        <a href="#musicas" class="button" onclick="window.location.href='https://seulinkmusicas.com'">Músicas</a>
+        <a href="https://wa.me/seu-numero-de-telefone" class="button" target="_blank">Suporte WhatsApp</a>
+        <a href="#wallpaper" class="button" onclick="window.location.href='https://seulinkwallpaper.com'">Wallpaper</a>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* ... (seu estilo CSS existente) ... */
+
+        /* Estilo para a barra de pesquisa */
+        .search-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, black, purple); /* Gradiente preto para roxo */
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            margin-right: 10px;
+        }
+
+        .search-text {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* Estilo para sugestões de conteúdo */
+        .suggestions {
+            position: absolute;
+            top: 50px; /* Ajuste conforme necessário */
+            left: 0;
+            background: white;
+            color: black;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none; /* Inicialmente oculto */
+        }
+
+        /* Exemplo de sugestões (substitua com dados reais) */
+        .suggestions ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .suggestions li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ... (seu conteúdo HTML existente) ... -->
+
+    <!-- Barra de pesquisa -->
+    <div class="search-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="search-input" placeholder="Pesquisar..." oninput="searchContent()">
+        <div class="suggestions">
+            <ul>
+                <li>Sugestão 1</li>
+                <li>Sugestão 2</li>
+                <!-- Adicione mais sugestões aqui -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Função para pesquisar conteúdo
+        function searchContent() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            const content = document.body.innerText.toLowerCase(); // Obtém todo o conteúdo da página
+
+            if (content.includes(searchInput)) {
+                // Se o conteúdo incluir a pesquisa, exiba-o
+                console.log('Conteúdo encontrado:', searchInput);
+            } else {
+                // Caso contrário, oculte o conteúdo
+                console.log('Nenhum conteúdo encontrado para:', searchInput);
+            }
+        }
+    </script>
+</body>
+</html>
+
+
